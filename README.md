@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# LEGG Surfacing Ltd — Website
 
-## Getting Started
+A production-quality, multi-page Next.js (App Router) website for LEGG
+Surfacing Ltd, a specialist surfacing and groundwork contractor on the
+Isle of Man.
 
-First, run the development server:
+## Tech stack
+
+- **Next.js 16** (App Router) + React 19 + TypeScript
+- **Tailwind CSS v4** for styling (CSS-based theme in `src/app/globals.css`)
+- **Framer Motion** for scroll-triggered reveals (respects `prefers-reduced-motion`)
+- **Lucide React** for icons
+
+## Getting started
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+  app/                  Routes (App Router) — one folder per page
+    services/[slug]/    Dynamic service detail pages
+    projects/[slug]/    Dynamic project detail pages
+    api/contact/        Server-side contact form handler
+    sitemap.ts, robots.ts
+  components/
+    ui/                 Design system primitives (Button, Section, Heading, Card, FaqAccordion...)
+    layout/             Navbar, Footer, Logo
+    sections/           Page sections (Hero, WhyChooseUs, CTASection...)
+    gallery/            Projects gallery grid + lightbox
+    forms/              Contact form
+  lib/
+    business.ts         Single source of truth for verified contact/business info
+    content/            Structured content: services, projects, faqs, testimonials, nav
+    validation/         Zod schemas shared by client + server
+    email.ts            Email provider integration point
+    seo.ts              JSON-LD structured data helpers
+```
 
-## Learn More
+All business copy (services, FAQs, projects, testimonials) lives in
+`src/lib/content/`, so new pages, projects and reviews can be added by
+editing data files rather than components.
 
-To learn more about Next.js, take a look at the following resources:
+## Content notes
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Testimonials**: `src/lib/content/testimonials.ts` is intentionally
+  empty until genuine, verified customer reviews are supplied — no
+  reviews have been fabricated.
+- **Project photography**: `src/lib/content/projects.ts` currently uses
+  professional stock photography as placeholders for the four known
+  project examples (flagged via `isPlaceholderImage: true`). Replace the
+  `image` URLs with real before/after project photography as it becomes
+  available.
+- **Facebook link**: `business.facebookUrl` is `null` until the correct
+  Facebook page URL is confirmed.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Contact form / email provider
 
-## Deploy on Vercel
+`POST /api/contact` validates submissions server-side with Zod, applies
+honeypot + timing-based spam protection, and calls
+`src/lib/email.ts#sendEnquiryEmail`. That function is wired up for
+[Resend](https://resend.com) but is intentionally provider-agnostic —
+swap in any transactional email API without touching the route.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Set these environment variables (e.g. in Vercel project settings, not
+committed to the repo):
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Variable            | Purpose                                             |
+| ------------------- | ---------------------------------------------------- |
+| `RESEND_API_KEY`    | API key for the email provider. Unset = enquiries are logged server-side instead of emailed (safe for local dev). |
+| `CONTACT_TO_EMAIL`  | Address enquiries are sent to. Defaults to the business email. |
+| `CONTACT_FROM_EMAIL`| Verified "from" address for the email provider.     |
+
+Optional photo attachments are validated (type/size/count) but not yet
+persisted anywhere — the route has a documented extension point for
+uploading to an S3 bucket via short-lived, least-privilege presigned
+URLs if/when that's needed.
+
+## Deployment
+
+Designed for [Vercel](https://vercel.com). No secrets are committed;
+configure the environment variables above in the hosting provider.

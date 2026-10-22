@@ -1,0 +1,41 @@
+{
+  "version": 1.1,
+  "atDirectives": [
+    {
+      "name": "@theme",
+      "description": "Tailwind CSS v4: defines design tokens (colors, fonts, etc.) as CSS custom properties, available as utility classes."
+    },
+    {
+      "name": "@tailwind",
+      "description": "Injects Tailwind's base, components, and utilities styles."
+    },
+    {
+      "name": "@apply",
+      "description": "Inlines existing Tailwind utility classes into custom CSS."
+    },
+    {
+      "name": "@layer",
+      "description": "Tells Tailwind which 'bucket' a set of custom styles belong to."
+    },
+    {
+      "name": "@config",
+      "description": "Specifies a custom Tailwind config path for a CSS file."
+    },
+    {
+      "name": "@plugin",
+      "description": "Registers a Tailwind CSS v4 plugin from a CSS file."
+    },
+    {
+      "name": "@variant",
+      "description": "Applies a Tailwind variant to styles within a CSS rule (Tailwind v4)."
+    },
+    {
+      "name": "@custom-variant",
+      "description": "Defines a custom Tailwind variant (Tailwind v4)."
+    },
+    {
+      "name": "@utility",
+      "description": "Defines a custom Tailwind utility class (Tailwind v4)."
+    }
+  ]
+}
