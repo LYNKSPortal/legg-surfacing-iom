@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Award, CheckCircle2 } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 import PageHero from "@/components/sections/PageHero";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import Section from "@/components/ui/Section";
@@ -135,9 +135,15 @@ export default function AboutPage() {
                 href={accreditation.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex gap-4 rounded-2xl bg-offwhite-dim p-6 ring-1 ring-charcoal/5 transition-colors hover:ring-accent/40"
+                className="flex gap-5 rounded-2xl bg-offwhite-dim p-6 ring-1 ring-charcoal/5 transition-colors hover:ring-accent/40"
               >
-                <Award className="mt-0.5 h-6 w-6 shrink-0 text-accent" aria-hidden="true" />
+                <Image
+                  src={accreditation.logoColour}
+                  alt={accreditation.name}
+                  width={80}
+                  height={94}
+                  className="h-16 w-auto shrink-0"
+                />
                 <div>
                   <h3 className="text-lg font-semibold text-charcoal">
                     {accreditation.name}

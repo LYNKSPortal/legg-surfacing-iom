@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import PageHero from "@/components/sections/PageHero";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
@@ -7,6 +8,7 @@ import Heading, { Eyebrow } from "@/components/ui/Heading";
 import Button from "@/components/ui/Button";
 import InspirationGrid from "@/components/inspiration/InspirationGrid";
 import CTASection from "@/components/sections/CTASection";
+import { business } from "@/lib/business";
 import {
   inspirationBlends,
   inspirationCategories,
@@ -32,17 +34,26 @@ export default function InspirationPage() {
       <Breadcrumbs items={[{ label: "Inspirations" }]} />
 
       <Section className="bg-offwhite">
-        <div className="max-w-2xl">
-          <Eyebrow>Colour & Aggregate Blends</Eyebrow>
-          <Heading as="h2" className="mt-4">
-            VUBA colour blend inspiration
-          </Heading>
-          <p className="mt-5 text-base leading-relaxed text-slate sm:text-lg">
-            These photographs and blend names are used under licence from
-            VUBA Surfaces, the manufacturer of the resin bound systems we
-            install. Tap any blend to see a larger sample photo, a
-            description and request a free quotation.
-          </p>
+        <div className="flex max-w-2xl flex-wrap items-start gap-6">
+          <Image
+            src={business.accreditations[0].logoColour}
+            alt={business.accreditations[0].name}
+            width={80}
+            height={94}
+            className="h-20 w-auto shrink-0"
+          />
+          <div>
+            <Eyebrow>Colour & Aggregate Blends</Eyebrow>
+            <Heading as="h2" className="mt-4">
+              VUBA colour blend inspiration
+            </Heading>
+            <p className="mt-5 text-base leading-relaxed text-slate sm:text-lg">
+              These photographs and blend names are used under licence from
+              VUBA Surfaces, the manufacturer of the resin bound systems we
+              install. Tap any blend to see a larger sample photo, a
+              description and request a free quotation.
+            </p>
+          </div>
         </div>
 
         <div className="mt-12">

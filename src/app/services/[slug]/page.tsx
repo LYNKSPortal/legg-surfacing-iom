@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { ArrowRight, CheckCircle2, Home, Images } from "lucide-react";
 import PageHero from "@/components/sections/PageHero";
@@ -11,6 +12,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import CTASection from "@/components/sections/CTASection";
 import { services, getServiceBySlug } from "@/lib/content/services";
 import { serviceJsonLd, faqJsonLd } from "@/lib/seo";
+import { business } from "@/lib/business";
 
 type Params = { slug: string };
 
@@ -105,6 +107,20 @@ export default async function ServicePage({
 
           <FadeIn>
             <div className="rounded-3xl bg-offwhite-dim p-7">
+              {service.slug === "resin-bound-surfacing" && (
+                <div className="mb-6 flex items-center gap-4 border-b border-charcoal/10 pb-6">
+                  <Image
+                    src={business.accreditations[0].logoColour}
+                    alt={business.accreditations[0].name}
+                    width={80}
+                    height={94}
+                    className="h-12 w-auto shrink-0"
+                  />
+                  <p className="text-sm leading-relaxed text-slate">
+                    LEGG Surfacing is a {business.accreditations[0].name.toLowerCase()}.
+                  </p>
+                </div>
+              )}
               <h3 className="text-sm font-semibold uppercase tracking-wide text-slate">
                 Common Applications
               </h3>

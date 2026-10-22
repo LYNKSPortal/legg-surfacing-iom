@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Mail, MapPin, Phone } from "lucide-react";
 import Container from "@/components/ui/Container";
 import FacebookIcon from "@/components/icons/FacebookIcon";
@@ -31,6 +32,27 @@ export default function Footer() {
                   <FacebookIcon className="h-4 w-4" />
                 </a>
               ) : null}
+            </div>
+
+            <div className="mt-8 flex flex-wrap items-center gap-4">
+              {business.accreditations.map((accreditation) => (
+                <a
+                  key={accreditation.name}
+                  href={accreditation.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={accreditation.name}
+                  className="opacity-90 transition-opacity hover:opacity-100"
+                >
+                  <Image
+                    src={accreditation.logoWhite}
+                    alt={accreditation.name}
+                    width={80}
+                    height={94}
+                    className="h-14 w-auto"
+                  />
+                </a>
+              ))}
             </div>
           </div>
 

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ArrowRight, Award, Phone } from "lucide-react";
+import { ArrowRight, Phone } from "lucide-react";
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 import { Eyebrow } from "@/components/ui/Heading";
@@ -43,15 +43,23 @@ export default function Hero() {
             {business.phoneDisplay}
           </Button>
         </div>
-        <div className="mt-8 flex flex-wrap items-center gap-3">
+        <div className="mt-8 flex flex-wrap items-center gap-4">
           {business.accreditations.map((accreditation) => (
-            <span
+            <div
               key={accreditation.name}
-              className="inline-flex items-center gap-2 rounded-full border border-offwhite/20 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-offwhite/85 backdrop-blur-sm"
+              className="flex items-center gap-2.5 rounded-full border border-offwhite/20 bg-white/5 py-2 pl-2 pr-4 backdrop-blur-sm"
             >
-              <Award className="h-4 w-4 text-accent-light" aria-hidden="true" />
-              {accreditation.name}
-            </span>
+              <Image
+                src={accreditation.logoWhite}
+                alt={accreditation.name}
+                width={80}
+                height={94}
+                className="h-8 w-auto"
+              />
+              <span className="text-xs font-semibold uppercase tracking-wide text-offwhite/85">
+                {accreditation.name}
+              </span>
+            </div>
           ))}
         </div>
       </Container>

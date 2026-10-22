@@ -40,10 +40,12 @@ export const business = {
   // VUBA's full resin bound surfacing product range on the Isle of Man.
   accreditations: [
     {
-      name: "VUBA Accredited Installer",
+      name: "VUBA Certified Installer",
       description:
         "LEGG Surfacing Ltd is a VUBA accredited installer, giving us access to the full VUBA resin bound surfacing product range for Isle of Man projects.",
       url: "https://www.vubasurfaces.co.uk/",
+      logoColour: "/vuba/Vuba-Col.png",
+      logoWhite: "/vuba/Vuba-White.png",
     },
   ],
 } as const;
