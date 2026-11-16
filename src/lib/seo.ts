@@ -19,6 +19,13 @@ export function organizationJsonLd() {
     image: `${siteConfig.url}${siteConfig.ogImage}`,
     telephone: business.phoneDisplay,
     email: business.email,
+    foundingDate: business.incorporationDate,
+    identifier: {
+      "@type": "PropertyValue",
+      propertyID: "Isle of Man Companies Registry",
+      value: business.companyNumber,
+      url: business.companyRegistryUrl,
+    },
     sameAs: businessSameAs(),
     contactPoint: {
       "@type": "ContactPoint",

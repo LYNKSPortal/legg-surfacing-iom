@@ -135,6 +135,17 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} {business.legalName}. All rights
             reserved.
           </p>
+          <p>
+            Registered in the Isle of Man, company no.{" "}
+            <a
+              href={business.companyRegistryUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-offwhite/70 underline-offset-2 hover:text-accent hover:underline"
+            >
+              {business.companyNumber}
+            </a>
+          </p>
           <p>{business.fullAddress}</p>
         </div>
       </Container>

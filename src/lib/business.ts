@@ -6,12 +6,21 @@
 
 export const business = {
   name: "LEGG Surfacing Ltd",
-  legalName: "LEGG Surfacing Ltd",
+  // Registered legal name per the Isle of Man Companies Registry.
+  legalName: "LEGG Surfacing Limited",
   tagline: "Specialist Surfacing & Groundwork Contractors",
   addressLine1: "The Paddocks",
   postcode: "IM7 3BD",
   region: "Isle of Man",
   fullAddress: "The Paddocks, IM7 3BD, Isle of Man",
+  // Verified via the Isle of Man Companies Registry.
+  companyNumber: "134233C",
+  companyRegistryType: "1931 Act Company",
+  incorporationDate: "2021-01-05",
+  registeredOfficeAddress:
+    "Unit 229B, Jurby Industrial Estate, Jurby, IM7 3BD, Isle of Man",
+  companyRegistryUrl:
+    "https://services.gov.im/ded/services/companiesregistry/viewcompany.iom?Id=Cd8%2bfkBJgRBjMWLa3WNqLw%3d%3d",
   phoneDisplay: "+44 7624 326454",
   phoneHref: "tel:+447624326454",
   email: "thomasholmes@leggsurfacing.co.uk",
