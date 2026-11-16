@@ -7,10 +7,20 @@ import GalleryGrid from "@/components/gallery/GalleryGrid";
 import { galleryImages, galleryCategories } from "@/lib/content/gallery";
 
 export const metadata: Metadata = {
-  title: "Gallery",
+  title: "Project Gallery | Isle of Man Surfacing Photos",
   description:
     "Browse photos of surfacing and groundwork work from LEGG Surfacing Ltd across the Isle of Man, filterable by tarmac, resin bound, roads & lanes, micro asphalt and groundworks.",
   alternates: { canonical: "/projects" },
+  openGraph: {
+    images: [
+      {
+        url: "/gallery/688740314_1554291820038563_4217299450706373818_n.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Resin bound patio with a decorative Manx emblem inlay",
+      },
+    ],
+  },
 };
 
 export default function GalleryPage() {

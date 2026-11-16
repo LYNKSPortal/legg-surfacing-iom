@@ -10,10 +10,20 @@ import CTASection from "@/components/sections/CTASection";
 import { services } from "@/lib/content/services";
 
 export const metadata: Metadata = {
-  title: "Surfacing Services",
+  title: "Surfacing Services in the Isle of Man",
   description:
     "Resin bound surfacing, tarmac driveways, road and lane surfacing, micro asphalt and groundworks from LEGG Surfacing Ltd, serving the Isle of Man.",
   alternates: { canonical: "/services" },
+  openGraph: {
+    images: [
+      {
+        url: "/gallery/701559013_1563599459107799_4625763931304252382_n.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Resurfacing a private lane through open countryside",
+      },
+    ],
+  },
 };
 
 export default function ServicesPage() {

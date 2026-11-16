@@ -54,4 +54,29 @@ export const generalFaqs: Faq[] = [
     answer:
       "It's helpful to have an idea of the area you'd like surfaced and any specific requirements or concerns, such as drainage issues or access restrictions, ready to discuss.",
   },
+  {
+    question: "What is resin bound surfacing?",
+    answer:
+      "Resin bound surfacing is a permeable, decorative surface made by mixing natural aggregate with a clear resin binder and trowelling it to a smooth, even finish. It's commonly used for driveways, paths and patios, and is available in a range of colour and aggregate blends.",
+  },
+  {
+    question: "What's the difference between resin bound and resin bonded surfacing?",
+    answer:
+      "Resin bound surfacing mixes the aggregate and resin together before laying, producing a smooth, permeable, walk-on finish. Resin bonded surfacing scatters loose aggregate onto a layer of resin, giving a textured, non-permeable finish. We specialise in resin bound surfacing.",
+  },
+  {
+    question: "Do I need planning permission for a new driveway on the Isle of Man?",
+    answer:
+      "This depends on factors such as the size of the area, your property type and drainage. We'd recommend checking with the relevant Isle of Man planning authority before work begins; we're happy to discuss your project and help you understand what's involved.",
+  },
+  {
+    question: "Is LEGG Surfacing Ltd based on the Isle of Man?",
+    answer:
+      "Yes. LEGG Surfacing Ltd is based at The Paddocks, IM7 3BD, Isle of Man, and carries out all of our surfacing and groundwork projects across the Island.",
+  },
+  {
+    question: "Are you accredited to install VUBA resin bound systems?",
+    answer:
+      "Yes, LEGG Surfacing Ltd is a VUBA Certified Installer, giving us access to VUBA's full range of resin bound colour and aggregate blends for Isle of Man projects.",
+  },
 ];

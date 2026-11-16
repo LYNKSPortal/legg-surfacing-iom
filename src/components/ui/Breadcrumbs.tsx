@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ChevronRight, Home } from "lucide-react";
 import Container from "./Container";
+import { siteConfig } from "@/lib/business";
 
 export type Crumb = {
   label: string;
@@ -8,14 +9,15 @@ export type Crumb = {
 };
 
 export default function Breadcrumbs({ items }: { items: Crumb[] }) {
+  const allItems: Crumb[] = [{ label: "Home", href: "/" }, ...items];
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    itemListElement: items.map((item, index) => ({
+    itemListElement: allItems.map((item, index) => ({
       "@type": "ListItem",
       position: index + 1,
       name: item.label,
-      item: item.href,
+      item: item.href ? `${siteConfig.url}${item.href === "/" ? "" : item.href}` : undefined,
     })),
   };
 

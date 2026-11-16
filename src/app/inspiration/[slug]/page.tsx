@@ -29,10 +29,29 @@ export async function generateMetadata({
   const { slug } = await params;
   const blend = getInspirationBlendById(slug);
   if (!blend) return {};
+  const description = `${blend.name} — a ${blend.category.toLowerCase()} resin bound colour blend. Request a free quotation from LEGG Surfacing Ltd for your Isle of Man project.`;
   return {
-    title: `${blend.name} | Inspirations`,
-    description: `${blend.name} — a ${blend.category.toLowerCase()} resin bound colour blend. Request a free quotation from LEGG Surfacing Ltd for your Isle of Man project.`,
+    title: `${blend.name} Resin Bound Blend`,
+    description,
     alternates: { canonical: `/inspiration/${blend.id}` },
+    openGraph: {
+      title: `${blend.name} | Resin Bound Colour Inspirations`,
+      description,
+      images: [
+        {
+          url: blend.detailImage,
+          width: 1200,
+          height: 1200,
+          alt: `${blend.name} resin bound colour blend sample`,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${blend.name} | Resin Bound Colour Inspirations`,
+      description,
+      images: [blend.detailImage],
+    },
   };
 }
 

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone, ExternalLink } from "lucide-react";
 import Container from "@/components/ui/Container";
 import FacebookIcon from "@/components/icons/FacebookIcon";
 import Logo from "./Logo";
@@ -113,6 +113,19 @@ export default function Footer() {
                   {business.email}
                 </a>
               </li>
+              {business.googleBusinessUrl ? (
+                <li className="flex items-center gap-3">
+                  <ExternalLink className="h-4 w-4 shrink-0 text-accent" aria-hidden="true" />
+                  <a
+                    href={business.googleBusinessUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-accent transition-colors"
+                  >
+                    Find us on Google
+                  </a>
+                </li>
+              ) : null}
             </ul>
           </div>
         </div>

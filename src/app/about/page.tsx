@@ -10,10 +10,20 @@ import CTASection from "@/components/sections/CTASection";
 import { business } from "@/lib/business";
 
 export const metadata: Metadata = {
-  title: "About Us",
+  title: "About Us | Isle of Man Surfacing Contractor",
   description:
     "LEGG Surfacing Ltd is a specialist surfacing and groundwork contractor based on the Isle of Man, focused on quality workmanship and dependable service.",
   alternates: { canonical: "/about" },
+  openGraph: {
+    images: [
+      {
+        url: "/gallery/687065433_1553399173461161_8668424976482873946_n.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Compacting a tarmac driveway during installation",
+      },
+    ],
+  },
 };
 
 const values = [

@@ -8,10 +8,20 @@ import { generalFaqs } from "@/lib/content/faqs";
 import { faqJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "FAQs",
+  title: "Surfacing & Groundwork FAQs",
   description:
     "Answers to common questions about surfacing, groundwork, quotations and the installation process from LEGG Surfacing Ltd on the Isle of Man.",
   alternates: { canonical: "/faqs" },
+  openGraph: {
+    images: [
+      {
+        url: "/gallery/698209421_1561059389361806_7370727440355159578_n.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Resin bound footpath installation in progress",
+      },
+    ],
+  },
 };
 
 export default function FaqsPage() {

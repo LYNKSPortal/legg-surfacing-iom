@@ -1,12 +1,46 @@
 import { business, siteConfig } from "./business";
 import { services } from "./content/services";
 
+function businessSameAs(): string[] {
+  return [business.facebookUrl, business.googleBusinessUrl].filter(
+    (url): url is string => Boolean(url)
+  );
+}
+
+export function organizationJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": `${siteConfig.url}/#organization`,
+    name: business.name,
+    legalName: business.legalName,
+    url: siteConfig.url,
+    logo: `${siteConfig.url}${siteConfig.logo}`,
+    image: `${siteConfig.url}${siteConfig.ogImage}`,
+    telephone: business.phoneDisplay,
+    email: business.email,
+    sameAs: businessSameAs(),
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: business.phoneDisplay,
+      email: business.email,
+      contactType: "customer service",
+      areaServed: "IM",
+      availableLanguage: "English",
+    },
+  };
+}
+
 export function localBusinessJsonLd() {
   return {
     "@context": "https://schema.org",
-    "@type": "GeneralContractor",
+    "@type": ["GeneralContractor", "HomeAndConstructionBusiness"],
+    "@id": `${siteConfig.url}/#localbusiness`,
     name: business.name,
+    legalName: business.legalName,
+    description: siteConfig.defaultDescription,
     image: `${siteConfig.url}${siteConfig.ogImage}`,
+    logo: `${siteConfig.url}${siteConfig.logo}`,
     url: siteConfig.url,
     telephone: business.phoneDisplay,
     email: business.email,
@@ -21,13 +55,18 @@ export function localBusinessJsonLd() {
       "@type": "City",
       name: area,
     })),
-    sameAs: business.facebookUrl ? [business.facebookUrl] : [],
+    sameAs: businessSameAs(),
+    hasMap: business.mapsUrl,
     makesOffer: services.map((service) => ({
       "@type": "Offer",
       itemOffered: {
         "@type": "Service",
         name: service.name,
         description: service.metaDescription,
+        areaServed: {
+          "@type": "AdministrativeArea",
+          name: "Isle of Man",
+        },
       },
     })),
   };
@@ -47,9 +86,11 @@ export function serviceJsonLd(service: {
     url: `${siteConfig.url}/services/${service.slug}`,
     provider: {
       "@type": "GeneralContractor",
+      "@id": `${siteConfig.url}/#localbusiness`,
       name: business.name,
       telephone: business.phoneDisplay,
       email: business.email,
+      image: `${siteConfig.url}${siteConfig.ogImage}`,
       address: {
         "@type": "PostalAddress",
         streetAddress: business.addressLine1,

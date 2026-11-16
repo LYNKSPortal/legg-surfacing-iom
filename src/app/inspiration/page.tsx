@@ -15,10 +15,20 @@ import {
 } from "@/lib/content/inspiration";
 
 export const metadata: Metadata = {
-  title: "Inspirations",
+  title: "Resin Bound Colour Inspirations",
   description:
     "Browse VUBA resin bound colour and aggregate blends for inspiration ahead of your resin bound driveway or patio project on the Isle of Man.",
   alternates: { canonical: "/inspiration" },
+  openGraph: {
+    images: [
+      {
+        url: "/inspiration/large/red-purple-milano-marble.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Milano Marble resin bound driveway with a decorative inset circle",
+      },
+    ],
+  },
 };
 
 export default function InspirationPage() {

@@ -18,9 +18,9 @@ export const business = {
   emailHref: "mailto:thomasholmes@leggsurfacing.co.uk",
   website: "https://leggsurfacing.co.uk",
   websiteDisplay: "leggsurfacing.co.uk",
-  // Facebook URL to be confirmed before publishing. Left as a placeholder
-  // flag so the link can be wired up once verified, rather than guessed.
-  facebookUrl: null as string | null,
+  facebookUrl: "https://www.facebook.com/leggsurfacing" as string | null,
+  // Google Business Profile share link (confirmed listing).
+  googleBusinessUrl: "https://share.google/ppz8HukNauN2d8UF7" as string | null,
   // Google Maps link using the known postcode. Should be replaced with the
   // confirmed pinned business location once verified.
   mapsUrl: "https://www.google.com/maps/search/?api=1&query=The+Paddocks+IM7+3BD+Isle+of+Man",
@@ -57,4 +57,15 @@ export const siteConfig = {
   defaultDescription:
     "LEGG Surfacing Ltd provides professional resin bound surfacing, tarmac driveways, road and lane surfacing, micro asphalt and groundworks across the Isle of Man, including Douglas, Peel, Ramsey, Castletown and Port Erin.",
   ogImage: "/og-image.jpg",
+  logo: "/logo/logo-colour.png",
+  keywords: [
+    "surfacing Isle of Man",
+    "resin bound surfacing Isle of Man",
+    "tarmac driveways Isle of Man",
+    "road surfacing Isle of Man",
+    "micro asphalt Isle of Man",
+    "groundworks Isle of Man",
+    "driveway contractor Isle of Man",
+    "LEGG Surfacing",
+  ],
 } as const;

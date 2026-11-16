@@ -29,11 +29,24 @@ export async function generateMetadata({
   const service = getServiceBySlug(slug);
   if (!service) return {};
   return {
-    title: service.name,
+    title: `${service.name} in the Isle of Man`,
     description: service.metaDescription,
     alternates: { canonical: `/services/${service.slug}` },
     openGraph: {
-      title: service.name,
+      title: `${service.name} in the Isle of Man`,
+      description: service.metaDescription,
+      images: [
+        {
+          url: service.heroImage,
+          width: 1200,
+          height: 630,
+          alt: service.heroImageAlt,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${service.name} in the Isle of Man`,
       description: service.metaDescription,
       images: [service.heroImage],
     },

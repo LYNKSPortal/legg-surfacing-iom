@@ -9,10 +9,20 @@ import ContactForm from "@/components/forms/ContactForm";
 import { business } from "@/lib/business";
 
 export const metadata: Metadata = {
-  title: "Contact Us",
+  title: "Contact Us | Free Quotation",
   description:
     "Get in touch with LEGG Surfacing Ltd for a free quotation on resin bound surfacing, tarmac driveways, road and lane surfacing or groundworks on the Isle of Man.",
   alternates: { canonical: "/contact" },
+  openGraph: {
+    images: [
+      {
+        url: "/gallery/689009096_1556223703178708_3023758006728532054_n.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Resin bound driveway at a brick property",
+      },
+    ],
+  },
 };
 
 export default function ContactPage() {
