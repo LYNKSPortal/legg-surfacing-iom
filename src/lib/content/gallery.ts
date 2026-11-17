@@ -27,40 +27,10 @@ export type GalleryImage = {
  */
 export const galleryImages: GalleryImage[] = [
   {
-    id: "tarmac-driveway-1",
-    category: "Tarmac",
-    image: "/tarmac-driveways.png",
-    imageAlt: "Freshly laid tarmac driveway at a residential property",
-  },
-  {
     id: "commercial-car-park-1",
     category: "Tarmac",
     image: "/commercial-car-park.jpg",
     imageAlt: "Aerial view of a resurfaced and line-marked commercial car park",
-  },
-  {
-    id: "road-lane-1",
-    category: "Roads & Lanes",
-    image: "/road-lane-surfacing.png",
-    imageAlt: "Newly surfaced private access lane",
-  },
-  {
-    id: "resin-bound-1",
-    category: "Resin Bound",
-    image: "/resin-bound-surfacing.png",
-    imageAlt: "Resin bound driveway installed at a residential property",
-  },
-  {
-    id: "micro-asphalt-1",
-    category: "Micro Asphalt",
-    image: "/micro-asphalt.png",
-    imageAlt: "Micro asphalt surface treatment applied to an access road",
-  },
-  {
-    id: "groundworks-1",
-    category: "Groundworks",
-    image: "/groundworks.png",
-    imageAlt: "Excavation and groundwork in progress ahead of surfacing",
   },
   // Additional photos sourced from LEGG Surfacing's Facebook page.
   {
