@@ -9,16 +9,14 @@ export const business = {
   // Registered legal name per the Isle of Man Companies Registry.
   legalName: "LEGG Surfacing Limited",
   tagline: "Specialist Surfacing & Groundwork Contractors",
-  addressLine1: "The Paddocks",
+  addressLine1: "Unit 229B, Jurby Industrial Estate",
   postcode: "IM7 3BD",
   region: "Isle of Man",
-  fullAddress: "The Paddocks, IM7 3BD, Isle of Man",
+  fullAddress: "Unit 229B, Jurby Industrial Estate, IM7 3BD, Isle of Man",
   // Verified via the Isle of Man Companies Registry.
   companyNumber: "134233C",
   companyRegistryType: "1931 Act Company",
   incorporationDate: "2021-01-05",
-  registeredOfficeAddress:
-    "Unit 229B, Jurby Industrial Estate, Jurby, IM7 3BD, Isle of Man",
   companyRegistryUrl:
     "https://services.gov.im/ded/services/companiesregistry/viewcompany.iom?Id=Cd8%2bfkBJgRBjMWLa3WNqLw%3d%3d",
   phoneDisplay: "+44 7624 326454",
@@ -32,9 +30,10 @@ export const business = {
   googleBusinessUrl: "https://share.google/ppz8HukNauN2d8UF7" as string | null,
   // Google Maps link using the known postcode. Should be replaced with the
   // confirmed pinned business location once verified.
-  mapsUrl: "https://www.google.com/maps/search/?api=1&query=The+Paddocks+IM7+3BD+Isle+of+Man",
+  mapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=Unit+229B+Jurby+Industrial+Estate+IM7+3BD+Isle+of+Man",
   mapsEmbedSrc:
-    "https://maps.google.com/maps?q=The%20Paddocks%2C%20IM7%203BD%2C%20Isle%20of%20Man&t=&z=13&ie=UTF8&iwloc=&output=embed",
+    "https://maps.google.com/maps?q=Unit%20229B%2C%20Jurby%20Industrial%20Estate%2C%20IM7%203BD%2C%20Isle%20of%20Man&t=&z=13&ie=UTF8&iwloc=&output=embed",
   serviceAreas: [
     "Douglas",
     "Peel",
