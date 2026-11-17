@@ -3,14 +3,16 @@ export type Testimonial = {
   author: string;
   location?: string;
   source?: string;
+  url?: string;
 };
 
 /**
- * Genuine public mentions and shout-outs for LEGG Surfacing Ltd, sourced
- * from the LEGG Surfacing Ltd Facebook page (facebook.com/leggsurfacing).
- * Quotes are lightly trimmed for length/readability but not altered in
- * meaning. No reviews have been fabricated. Add further genuine,
- * verified reviews here as they become available.
+ * Genuine public mentions and reviews for LEGG Surfacing Ltd, sourced
+ * from the LEGG Surfacing Ltd Facebook page (facebook.com/leggsurfacing)
+ * and from verified Google reviews on the LEGG Surfacing Google Business
+ * Profile. Quotes are lightly trimmed for length/readability but not
+ * altered in meaning. No reviews have been fabricated. Add further
+ * genuine, verified reviews here as they become available.
  */
 export const testimonials: Testimonial[] = [
   {
@@ -30,5 +32,19 @@ export const testimonials: Testimonial[] = [
       "A huge shout out to Tom and the gang from LEGG Surfacing Ltd who have been helping us complete the main hardstanding for the storage yard. Thanks guys, can't wait to repay the generosity.",
     author: "The Manx Viking Project",
     source: "Facebook",
+  },
+  {
+    quote:
+      "We recently had a large new porcelain patio installed by a great team at LEGG Surfacing Limited. We strongly recommend this company for their excellent, skilled work.",
+    author: "Bremere Lane, Sidlesham",
+    source: "Google",
+    url: "https://www.google.com/maps/contrib/103322139104252252442/reviews?hl=en-GB",
+  },
+  {
+    quote:
+      "Great job. Drive looks amazing, even with the three legs of Mann in blue — it really sets the house off. They had many colours to choose from and gave us all the advice on the finish…",
+    author: "Lisa Maule",
+    source: "Google",
+    url: "https://www.google.com/maps/contrib/105690044463441513194/reviews?hl=en-GB",
   },
 ];

@@ -30,7 +30,19 @@ export default function Testimonials() {
                     <span className="block font-normal text-slate">
                       {testimonial.location}
                       {testimonial.location && testimonial.source && " · "}
-                      {testimonial.source && `via ${testimonial.source}`}
+                      {testimonial.source &&
+                        (testimonial.url ? (
+                          <a
+                            href={testimonial.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:text-accent hover:underline"
+                          >
+                            via {testimonial.source}
+                          </a>
+                        ) : (
+                          `via ${testimonial.source}`
+                        ))}
                     </span>
                   )}
                 </figcaption>
