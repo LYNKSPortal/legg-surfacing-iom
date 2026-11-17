@@ -33,27 +33,6 @@ export default function Footer() {
                 </a>
               ) : null}
             </div>
-
-            <div className="mt-8 flex flex-wrap items-center gap-4">
-              {business.accreditations.map((accreditation) => (
-                <a
-                  key={accreditation.name}
-                  href={accreditation.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={accreditation.name}
-                  className="opacity-90 transition-opacity hover:opacity-100"
-                >
-                  <Image
-                    src={accreditation.logoWhite}
-                    alt={accreditation.name}
-                    width={80}
-                    height={94}
-                    className="h-14 w-auto"
-                  />
-                </a>
-              ))}
-            </div>
           </div>
 
           <div>
@@ -130,7 +109,33 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 flex flex-col gap-4 border-t border-offwhite/10 pt-8 text-xs text-offwhite/50 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-14 border-t border-offwhite/10 pt-10">
+          <h3 className="text-sm font-semibold uppercase tracking-wider text-offwhite/50">
+            Accreditations & Memberships
+          </h3>
+          <div className="mt-6 flex flex-wrap items-center gap-4">
+            {business.certifications.map((certification) => (
+              <a
+                key={certification.name}
+                href={certification.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={certification.name}
+                className="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl bg-white p-2 shadow-sm transition-transform hover:-translate-y-0.5"
+              >
+                <Image
+                  src={certification.logo}
+                  alt={certification.name}
+                  width={200}
+                  height={200}
+                  className="h-full w-full object-contain"
+                />
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-10 flex flex-col gap-4 border-t border-offwhite/10 pt-8 text-xs text-offwhite/50 sm:flex-row sm:items-center sm:justify-between">
           <p>
             &copy; {new Date().getFullYear()} {business.legalName}. All rights
             reserved.

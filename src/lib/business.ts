@@ -56,6 +56,30 @@ export const business = {
       logoWhite: "/vuba/Vuba-White.png",
     },
   ],
+  // Accreditations and certifications displayed as a badge strip
+  // (e.g. in the footer).
+  certifications: [
+    {
+      name: "VUBA Certified",
+      logo: "/accred/vuba-certified.jpg",
+      url: "https://www.vubasurfaces.co.uk/",
+    },
+    {
+      name: "GQA Level 2 NVQ Diploma in Construction Operations and Civil Engineering - Highways Maintenance",
+      logo: "/accred/gqa.jpg",
+      url: "https://gqaqualifications.com/",
+    },
+    {
+      name: "Manx Accredited Construction Contractors Scheme (MACCS)",
+      logo: "/accred/maccs.jpg",
+      url: "https://www.constructioniom.im/",
+    },
+    {
+      name: "UNESCO Biosphere Isle of Man",
+      logo: "/accred/UNESCO-Biosphere.jpg",
+      url: "https://www.biosphere.im/",
+    },
+  ],
 } as const;
 
 export const siteConfig = {
