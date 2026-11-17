@@ -3,10 +3,15 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import Section from "@/components/ui/Section";
 import Heading, { Eyebrow } from "@/components/ui/Heading";
+import Button from "@/components/ui/Button";
 import FadeIn from "@/components/ui/FadeIn";
 import { services } from "@/lib/content/services";
 
+const FEATURED_COUNT = 6;
+
 export default function ServicesOverview() {
+  const featuredServices = services.slice(0, FEATURED_COUNT);
+
   return (
     <Section className="bg-offwhite">
       <div className="max-w-2xl">
@@ -22,7 +27,7 @@ export default function ServicesOverview() {
       </div>
 
       <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {services.map((service, index) => (
+        {featuredServices.map((service, index) => (
           <FadeIn key={service.slug} delay={index * 0.08}>
             <Link
               href={`/services/${service.slug}`}
@@ -54,6 +59,14 @@ export default function ServicesOverview() {
           </FadeIn>
         ))}
       </div>
+
+      {services.length > FEATURED_COUNT && (
+        <div className="mt-12 flex justify-center">
+          <Button href="/services" variant="outline" icon={<ArrowUpRight className="h-4 w-4" />}>
+            View All Services
+          </Button>
+        </div>
+      )}
     </Section>
   );
 }
