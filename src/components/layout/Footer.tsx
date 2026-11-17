@@ -121,13 +121,13 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={certification.name}
-                className="flex h-28 w-28 shrink-0 items-center justify-center rounded-xl bg-white p-3 shadow-sm transition-transform hover:-translate-y-0.5 sm:h-32 sm:w-32"
+                className="flex h-36 w-36 shrink-0 items-center justify-center rounded-xl bg-white p-4 shadow-sm transition-transform hover:-translate-y-0.5 sm:h-44 sm:w-44"
               >
                 <Image
                   src={certification.logo}
                   alt={certification.name}
-                  width={300}
-                  height={300}
+                  width={400}
+                  height={400}
                   className="h-full w-full object-contain"
                 />
               </a>
