@@ -363,6 +363,7 @@ export const services: Service[] = [
       "A specialist cold-applied surface treatment used to refresh and protect existing road, lane and car park surfaces.",
     intro: [
       "Micro asphalt is a specialist, thin surface treatment applied to existing road, lane or car park surfaces to refresh their condition and extend their service life. It is typically used as a preventative or restorative treatment rather than a full reconstruction.",
+      "On carriageways, we typically apply micro asphalt as a two-coat system: a first, coarser coat to fill ruts, reprofile the existing surface and even out wear, followed by a second, finer coat to give a smooth, consistent wearing course and finished texture.",
       "Because it is applied as a thinner surface treatment, micro asphalt is not suitable for every surface. A proper assessment of the existing surface condition, underlying structure and drainage is essential before deciding whether it is the right solution for a particular site.",
       "LEGG Surfacing carries out a suitability assessment for every potential micro asphalt project, ensuring the treatment is appropriate before any work is scheduled.",
     ],
@@ -406,9 +407,14 @@ export const services: Service[] = [
           "The existing surface is cleaned and prepared, with any necessary repairs carried out ahead of treatment.",
       },
       {
-        title: "Application",
+        title: "First coat",
         description:
-          "The micro asphalt treatment is applied using appropriate specialist equipment.",
+          "On carriageway projects, a first, coarser coat is applied to fill ruts, reprofile the surface and even out wear.",
+      },
+      {
+        title: "Second coat",
+        description:
+          "A second, finer coat is applied over the first to give a smooth, consistent wearing course and finished texture.",
       },
       {
         title: "Finishing and handover",
@@ -419,6 +425,7 @@ export const services: Service[] = [
     considerations: [
       "Not every surface is suitable for micro asphalt — a proper assessment is essential before proceeding.",
       "The treatment is best suited to surfaces in reasonable underlying structural condition.",
+      "On carriageways, we typically apply a two-coat system for the best reprofiling and finished texture.",
       "Curing times should be followed before the surface is reopened to traffic.",
     ],
     faqs: [
@@ -437,6 +444,11 @@ export const services: Service[] = [
         answer:
           "Micro asphalt is a thinner surface treatment applied to an existing surface in reasonable condition, rather than a full reconstruction of the road or driveway.",
       },
+      {
+        question: "What is a two-coat micro asphalt system?",
+        answer:
+          "On carriageways, we typically apply micro asphalt in two coats: a first, coarser coat to fill ruts and reprofile the existing surface, followed by a second, finer coat that gives the finished wearing course its smooth, consistent texture.",
+      },
     ],
     metaDescription:
       "Micro asphalt surface treatment for roads, lanes and car parks on the Isle of Man. Specialist assessment and application from LEGG Surfacing Ltd.",
@@ -445,19 +457,20 @@ export const services: Service[] = [
     slug: "groundworks",
     name: "Drainage & Groundworks",
     shortName: "Drainage & Groundworks",
-    tagline: "Drainage, excavation and site preparation for surfacing projects",
+    tagline: "Drainage, excavation and site preparation — on its own or with a surfacing project",
     heroImage: "/groundworks.png",
     heroImageAlt: "Excavation and groundwork in progress ahead of surfacing",
     cardImage: "/groundworks.png",
     cardImageAlt: "Groundwork and excavation ahead of surfacing",
     summary:
-      "Excavation, drainage and site preparation that forms the foundation of every quality surfacing project.",
+      "Excavation, drainage and site preparation, available as a standalone service or as the foundation of a wider surfacing project.",
     intro: [
       "The quality and longevity of any surfacing project depends on the groundwork and drainage beneath it. Proper excavation, levelling, sub-base construction and drainage provision are essential steps that are often unseen once a project is complete, but are fundamental to its performance.",
-      "LEGG Surfacing carries out drainage and groundwork associated with our surfacing projects, from excavating and preparing a driveway base to wider site preparation and drainage runs ahead of tarmac, resin bound or road surfacing works.",
-      "Surface water drainage — including channel drains, soakaways and falls to existing drainage points — is assessed and prepared as part of the groundwork, in line with the specific requirements of the site.",
+      "LEGG Surfacing carries out drainage and groundwork both as part of our surfacing projects and as a standalone service — for example, resolving a standing water or drainage problem, or preparing a site, without necessarily needing new surfacing laid at the same time.",
+      "Surface water drainage — including channel drains, soakaways and falls to existing drainage points — is assessed and prepared in line with the specific requirements of the site, whether or not it's part of a larger project.",
     ],
     applications: [
+      "Standalone drainage and surface water problems",
       "Excavation and site clearance ahead of surfacing",
       "Sub-base preparation for driveways, roads and lanes",
       "Levelling and formation of new surfacing areas",
@@ -522,7 +535,7 @@ export const services: Service[] = [
       {
         question: "Can you carry out drainage and groundwork on its own?",
         answer:
-          "Our drainage and groundwork is generally undertaken as part of an associated surfacing project. Please get in touch to discuss your specific requirements.",
+          "Yes. While drainage and groundwork are often part of a wider surfacing project, we're also happy to take on standalone drainage and groundwork enquiries — get in touch to discuss your specific requirements.",
       },
       {
         question: "Can you help with an existing drainage or standing water problem?",
@@ -923,25 +936,32 @@ export const services: Service[] = [
     slug: "resin-bonded-high-friction-surfacing",
     name: "Resin-Bonded and High-Friction Surfacing",
     shortName: "Resin-Bonded & High-Friction",
-    tagline: "Textured, skid-resistant surfacing for paths, roads and junctions",
+    tagline: "A textured driveway alternative to resin bound, also used on paths, roads and junctions",
     heroImage: "/gallery/833926071_1697029229098154_4475602817241088947_n.jpg",
     heroImageAlt: "Resurfaced residential road and footway",
     cardImage: "/gallery/833926071_1697029229098154_4475602817241088947_n.jpg",
     cardImageAlt: "Resurfaced road and footway",
     summary:
-      "Textured resin-bonded and high-friction surfacing used to improve grip on paths, cycle routes, roads and junctions.",
+      "A textured, scattered-aggregate surface offered as a driveway alternative to resin bound surfacing, and also used to improve grip on paths, cycle routes, roads and junctions.",
     intro: [
-      "Resin-bonded surfacing is created by scattering a loose aggregate onto a layer of resin, giving a textured, non-permeable surface — distinct from resin bound surfacing, where the aggregate and resin are mixed together before laying.",
-      "High-friction surfacing uses a similar bonded-aggregate approach to significantly improve skid resistance at locations such as junctions, bends, pedestrian crossings and cycle routes.",
-      "LEGG Surfacing assesses each resin-bonded and high-friction surfacing project on-site, as the application, aggregate and colour depend on the location and its specific skid-resistance requirements.",
+      "Resin-bonded surfacing is created by scattering a loose aggregate onto a layer of resin, giving a textured, non-permeable surface — distinct from resin bound surfacing, where the aggregate and resin are mixed together before laying to give a smoother, permeable finish.",
+      "For driveways and patios, resin-bonded surfacing offers a different look and feel to resin bound — a more pronounced, textured, scattered-stone finish — so it's worth considering both options when choosing a resin surface for your property.",
+      "The same bonded-aggregate approach is also used as high-friction surfacing, to significantly improve skid resistance at locations such as junctions, bends, pedestrian crossings and cycle routes.",
+      "LEGG Surfacing assesses each resin-bonded and high-friction surfacing project on-site, as the application, aggregate and colour depend on the location and its specific requirements.",
     ],
     applications: [
+      "Domestic driveways and patios (as a textured alternative to resin bound)",
       "Cycle paths and cycle lanes",
       "Pedestrian crossings and footways",
       "Road junctions and bends",
       "Bus stops and approach roads",
     ],
     benefits: [
+      {
+        title: "A driveway alternative to resin bound",
+        description:
+          "Offers a different, more textured finish to resin bound surfacing, giving homeowners another resin-based option for driveways and patios.",
+      },
       {
         title: "Improved skid resistance",
         description:
@@ -955,10 +975,11 @@ export const services: Service[] = [
       {
         title: "Colour options for visibility",
         description:
-          "Coloured finishes can be used to highlight cycle routes, crossings or other areas where visibility is important.",
+          "Coloured finishes can be used to highlight cycle routes, crossings or other areas where visibility is important, or to suit your driveway's style.",
       },
     ],
     propertyTypes: [
+      "Residential driveways and patios",
       "Highways and junctions",
       "Cycle paths and cycle lanes",
       "Pedestrian crossings and footways",
@@ -998,6 +1019,11 @@ export const services: Service[] = [
     ],
     faqs: [
       {
+        question: "Can resin-bonded surfacing be used for a driveway?",
+        answer:
+          "Yes. Resin-bonded surfacing is a popular driveway option in its own right, giving a textured, scattered-aggregate finish as an alternative to resin bound surfacing. We can talk you through both options during your site visit.",
+      },
+      {
         question: "What's the difference between resin-bonded and resin bound surfacing?",
         answer:
           "Resin-bonded surfacing scatters loose aggregate onto a layer of resin, giving a textured, non-permeable finish, whereas resin bound surfacing mixes the aggregate and resin together before laying, giving a smooth, permeable finish.",
@@ -1010,11 +1036,11 @@ export const services: Service[] = [
       {
         question: "Can high-friction surfacing be installed in a specific colour?",
         answer:
-          "Yes, coloured finishes are available and are often used to highlight cycle routes or crossings where visibility is important.",
+          "Yes, coloured finishes are available and are often used to highlight cycle routes or crossings where visibility is important, or to suit your driveway's style.",
       },
     ],
     metaDescription:
-      "Resin-bonded and high-friction surfacing on the Isle of Man from LEGG Surfacing Ltd, for paths, cycle routes, roads and junctions requiring improved skid resistance.",
+      "Resin-bonded surfacing on the Isle of Man from LEGG Surfacing Ltd — a textured driveway alternative to resin bound, also used for paths, cycle routes, roads and junctions requiring improved skid resistance.",
   },
   {
     slug: "fencing",
@@ -1273,6 +1299,340 @@ export const services: Service[] = [
     ],
     metaDescription:
       "General landscaping services on the Isle of Man from LEGG Surfacing Ltd's dedicated landscaping team, delivered alongside groundwork and surfacing projects.",
+  },
+  {
+    slug: "block-paving",
+    name: "Block Paving",
+    shortName: "Block Paving",
+    tagline: "Block paving driveways and patios in a range of styles",
+    heroImage: "/groundworks.png",
+    heroImageAlt: "Site preparation ahead of a driveway installation",
+    cardImage: "/groundworks.png",
+    cardImageAlt: "Site preparation ahead of a driveway installation",
+    summary:
+      "Block paving driveways and patios, laid over a properly prepared sub-base in a choice of blocks, colours and patterns.",
+    intro: [
+      "Block paving remains a popular, versatile choice for driveways and patios, offering a wide range of block styles, colours and laying patterns to suit the character of your property.",
+      "A long-lasting block paving installation depends on correct excavation, sub-base construction and edge restraint, so every project is assessed on-site before work begins.",
+      "LEGG Surfacing lays block paving to a properly specified sub-base, with attention to falls and drainage so the finished surface performs well over time.",
+    ],
+    applications: [
+      "Domestic driveways",
+      "Garden paths and patios",
+      "Pathways and entrance areas",
+      "Commercial forecourts",
+    ],
+    benefits: [
+      {
+        title: "Wide choice of styles",
+        description:
+          "A range of block types, colours and laying patterns are available to suit your property.",
+      },
+      {
+        title: "Individually replaceable units",
+        description:
+          "Because the surface is made up of individual blocks, isolated areas can potentially be lifted and replaced if ever needed.",
+      },
+      {
+        title: "Proven, durable surfacing",
+        description:
+          "Correctly laid over a suitable sub-base, block paving is a durable surface for driveways and patios.",
+      },
+    ],
+    propertyTypes: [
+      "Detached and semi-detached homes",
+      "Period and new-build properties",
+      "Commercial entrances and forecourts",
+    ],
+    process: [
+      {
+        title: "Site assessment",
+        description:
+          "We assess the site, existing levels and drainage, and discuss block style, colour and pattern options.",
+      },
+      {
+        title: "Excavation and preparation",
+        description:
+          "The area is excavated and a suitable sub-base is laid and compacted ahead of laying.",
+      },
+      {
+        title: "Edge restraint",
+        description:
+          "Edge restraints are installed to contain the paving and define clean boundaries.",
+      },
+      {
+        title: "Laying the blocks",
+        description:
+          "Blocks are laid to the agreed pattern over a bedding layer of sand.",
+      },
+      {
+        title: "Jointing and finishing",
+        description:
+          "Joints are filled, the surface is compacted, and the site is left clean and tidy on completion.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Can I choose the colour and pattern of my block paving?",
+        answer:
+          "Yes, a range of block styles, colours and laying patterns are available, and we'll talk you through the options during your site visit.",
+      },
+      {
+        question: "Does block paving need much maintenance?",
+        answer:
+          "Occasional sweeping and washing down will help keep block paving looking its best, and individual blocks can potentially be lifted and replaced if ever damaged.",
+      },
+    ],
+    metaDescription:
+      "Block paving driveways and patios on the Isle of Man from LEGG Surfacing Ltd, in a range of block styles, colours and laying patterns.",
+  },
+  {
+    slug: "porcelain-paving",
+    name: "Porcelain Paving",
+    shortName: "Porcelain Paving",
+    tagline: "Modern, low-maintenance porcelain paving for patios and outdoor spaces",
+    heroImage: "/groundworks.png",
+    heroImageAlt: "Site preparation ahead of a paving installation",
+    cardImage: "/groundworks.png",
+    cardImageAlt: "Site preparation ahead of a paving installation",
+    summary:
+      "Modern, low-maintenance porcelain paving for patios and outdoor living spaces, laid over a properly prepared base.",
+    intro: [
+      "Porcelain paving has become a popular choice for patios and outdoor spaces, offering a contemporary, low-maintenance finish in a wide range of colours, textures and tile sizes.",
+      "Because porcelain tiles are dense and low-porosity, they resist staining and are straightforward to keep clean, while a correctly prepared sub-base and falls are essential to a long-lasting installation.",
+      "LEGG Surfacing assesses every porcelain paving project on-site to confirm the right base build-up, falls and jointing approach before laying begins.",
+    ],
+    applications: [
+      "Garden patios and outdoor seating areas",
+      "Pool surrounds",
+      "Entrance areas and pathways",
+      "Commercial outdoor spaces",
+    ],
+    benefits: [
+      {
+        title: "Modern, consistent finish",
+        description:
+          "A wide range of colours, textures and tile sizes are available to suit a contemporary or traditional property.",
+      },
+      {
+        title: "Low-maintenance surface",
+        description:
+          "Dense, low-porosity porcelain tiles resist staining and are straightforward to keep clean.",
+      },
+      {
+        title: "Durable and weather-resistant",
+        description:
+          "Correctly installed porcelain paving is a hard-wearing option for outdoor use.",
+      },
+    ],
+    propertyTypes: [
+      "Residential gardens and patios",
+      "New-build and renovation properties",
+      "Commercial outdoor spaces",
+    ],
+    process: [
+      {
+        title: "Site assessment",
+        description:
+          "We assess the site, existing levels and drainage, and discuss tile style, size and colour options.",
+      },
+      {
+        title: "Excavation and base preparation",
+        description:
+          "The area is excavated and a suitable sub-base is laid and compacted ahead of laying.",
+      },
+      {
+        title: "Laying the tiles",
+        description:
+          "Porcelain tiles are laid to the correct falls and spacing over a suitable bedding system.",
+      },
+      {
+        title: "Jointing and finishing",
+        description:
+          "Joints are filled and the finished area is cleaned and checked before handover.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Is porcelain paving suitable for the Isle of Man climate?",
+        answer:
+          "Yes, porcelain paving is a dense, low-porosity material that's well suited to outdoor use when correctly installed over a suitable base with proper falls for drainage.",
+      },
+      {
+        question: "How do I maintain porcelain paving?",
+        answer:
+          "Porcelain paving is low-maintenance — occasional sweeping and washing down is usually all that's needed to keep it looking its best.",
+      },
+    ],
+    metaDescription:
+      "Porcelain paving for patios and outdoor spaces on the Isle of Man from LEGG Surfacing Ltd, in a range of colours, textures and tile sizes.",
+  },
+  {
+    slug: "concrete-driveways",
+    name: "Concrete Driveways",
+    shortName: "Concrete Driveways",
+    tagline: "Plain and brushed concrete driveways and hardstanding",
+    heroImage: "/groundworks.png",
+    heroImageAlt: "Site preparation ahead of a concrete driveway installation",
+    cardImage: "/groundworks.png",
+    cardImageAlt: "Site preparation ahead of a concrete driveway installation",
+    summary:
+      "Durable plain and brushed concrete driveways and hardstanding, laid over a properly prepared sub-base.",
+    intro: [
+      "Concrete remains a durable, practical surfacing option for driveways, hardstanding and commercial yards, offering a strong, long-lasting finish with a simple, clean appearance.",
+      "A finished concrete surface can be left plain or given a brushed texture for extra grip, with control joints positioned to manage natural cracking as the concrete cures.",
+      "LEGG Surfacing assesses every concrete driveway project on-site, as ground conditions, falls and intended use all affect the correct specification.",
+    ],
+    applications: [
+      "Domestic driveways and hardstanding",
+      "Commercial yards and forecourts",
+      "Agricultural hardstanding",
+      "Access roads and parking areas",
+    ],
+    benefits: [
+      {
+        title: "Durable and low-maintenance",
+        description:
+          "A correctly laid concrete surface is strong, long-lasting and straightforward to maintain.",
+      },
+      {
+        title: "Plain or brushed finish",
+        description:
+          "Concrete can be finished plain or with a brushed texture for extra grip underfoot and for vehicles.",
+      },
+      {
+        title: "Suited to heavier use",
+        description:
+          "Concrete hardstanding is well suited to commercial yards and areas taking heavier vehicle loads.",
+      },
+    ],
+    propertyTypes: [
+      "Residential driveways",
+      "Commercial yards and forecourts",
+      "Agricultural and rural properties",
+    ],
+    process: [
+      {
+        title: "Site assessment",
+        description:
+          "We assess ground conditions, falls and intended use before recommending a suitable concrete specification.",
+      },
+      {
+        title: "Excavation and sub-base",
+        description:
+          "The area is excavated and a suitable sub-base is laid and compacted ahead of the concrete pour.",
+      },
+      {
+        title: "Formwork and reinforcement",
+        description:
+          "Formwork is set out and reinforcement added where specified, ahead of pouring.",
+      },
+      {
+        title: "Pouring and finishing",
+        description:
+          "Concrete is poured, levelled and finished plain or brushed as specified, with control joints positioned to manage cracking.",
+      },
+      {
+        title: "Curing and handover",
+        description:
+          "The concrete is left to cure before being handed over, with guidance on initial care.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Should concrete be plain or brushed?",
+        answer:
+          "A brushed finish gives extra grip underfoot and for vehicles, while a plain finish gives a smoother appearance. We can talk through which suits your project during your site visit.",
+      },
+      {
+        question: "Will my concrete driveway crack?",
+        answer:
+          "Concrete naturally develops some fine cracking as it cures. We position control joints to help manage this in a controlled, less noticeable way.",
+      },
+    ],
+    metaDescription:
+      "Plain and brushed concrete driveways and hardstanding on the Isle of Man from LEGG Surfacing Ltd, for domestic and commercial properties.",
+  },
+  {
+    slug: "driveway-lighting",
+    name: "Driveway Lighting",
+    shortName: "Driveway Lighting",
+    tagline: "Illuminated edging and lighting installed alongside a new driveway",
+    heroImage: "/gallery/721516667_1588035779997500_3845153624523639094_n.jpg",
+    heroImageAlt: "Tarmac driveway with illuminated edging detail",
+    cardImage: "/gallery/724313188_1588035719997506_6250231971419847922_n.jpg",
+    cardImageAlt: "Tarmac driveway with illuminated edging and planting bed",
+    summary:
+      "Illuminated driveway edging and lighting, installed alongside a new driveway for a striking, practical finishing touch.",
+    intro: [
+      "Driveway lighting — such as illuminated edging set flush into the surface — adds a striking finishing touch to a new driveway while improving visibility and safety after dark.",
+      "Because lighting is installed as the driveway is laid, planning it in from the start means cabling, edging and the finished surface all come together neatly.",
+      "LEGG Surfacing fits driveway lighting as an addition to a new tarmac, resin bound or block paving driveway, discussed and specified as part of your site visit.",
+    ],
+    applications: [
+      "New driveway installations",
+      "Driveway resurfacing projects",
+      "Pathways and entrance areas",
+      "Feature lighting around planting beds and edges",
+    ],
+    benefits: [
+      {
+        title: "A striking finishing touch",
+        description:
+          "Illuminated edging gives a new driveway a distinctive, high-end appearance after dark.",
+      },
+      {
+        title: "Improved visibility and safety",
+        description:
+          "Lit edges and pathways make it easier to see the extent of the driveway in low light.",
+      },
+      {
+        title: "Installed as part of your driveway project",
+        description:
+          "Planning lighting in from the start means cabling and fittings are neatly integrated into the finished surface.",
+      },
+    ],
+    propertyTypes: [
+      "Residential driveways of all sizes",
+      "New-build and renovation properties",
+      "Commercial entrances",
+    ],
+    process: [
+      {
+        title: "Design discussion",
+        description:
+          "We discuss the lighting layout, style and any feature areas you'd like highlighted as part of your driveway design.",
+      },
+      {
+        title: "Cabling and first fix",
+        description:
+          "Cabling and fittings are positioned and first-fixed during the groundwork and sub-base stages.",
+      },
+      {
+        title: "Driveway installation",
+        description:
+          "The driveway surface is laid around the lighting fittings and edging.",
+      },
+      {
+        title: "Testing and handover",
+        description:
+          "The lighting is tested and demonstrated before handover, with guidance on care.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Can driveway lighting be added to any driveway type?",
+        answer:
+          "Driveway lighting is installed alongside a new driveway, as the cabling and fittings need to be positioned before the final surface is laid. We're happy to discuss options as part of your new driveway project.",
+      },
+      {
+        question: "Is driveway lighting weatherproof?",
+        answer:
+          "Driveway lighting fittings are designed for outdoor, in-ground use, and we'll talk you through the specification as part of your site visit.",
+      },
+    ],
+    metaDescription:
+      "Driveway lighting and illuminated edging on the Isle of Man from LEGG Surfacing Ltd, installed alongside new tarmac, resin bound or block paving driveways.",
   },
 ];
 

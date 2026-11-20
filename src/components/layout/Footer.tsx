@@ -135,7 +135,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col gap-4 border-t border-offwhite/10 pt-8 text-xs text-offwhite/50 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-10 flex flex-col gap-4 border-t border-offwhite/10 pt-8 text-xs text-offwhite/50 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
           <p>
             &copy; {new Date().getFullYear()} {business.legalName}. All rights
             reserved.
@@ -151,6 +151,9 @@ export default function Footer() {
               {business.companyNumber}
             </a>
           </p>
+          <Link href="/privacy" className="hover:text-accent hover:underline">
+            Privacy Notice
+          </Link>
           <p>{business.fullAddress}</p>
         </div>
       </Container>

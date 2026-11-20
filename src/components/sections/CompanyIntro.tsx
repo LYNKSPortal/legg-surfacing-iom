@@ -3,6 +3,7 @@ import Section from "@/components/ui/Section";
 import Heading, { Eyebrow } from "@/components/ui/Heading";
 import Button from "@/components/ui/Button";
 import FadeIn from "@/components/ui/FadeIn";
+import { business } from "@/lib/business";
 
 export default function CompanyIntro() {
   return (
@@ -26,7 +27,7 @@ export default function CompanyIntro() {
           </Heading>
           <p className="mt-5 text-base leading-relaxed text-slate sm:text-lg">
             LEGG Surfacing Ltd is a specialist surfacing and groundwork
-            contractor, based at The Paddocks on the Isle of Man. We work
+            contractor, based at {business.addressLine1} on the Isle of Man. We work
             with residential, commercial and infrastructure customers on
             resin bound surfacing, tarmac driveways, road and lane
             surfacing, micro asphalt and the groundworks that support them.

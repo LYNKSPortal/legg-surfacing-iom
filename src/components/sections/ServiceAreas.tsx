@@ -14,9 +14,9 @@ export default function ServiceAreas() {
             Serving the whole of the Isle of Man
           </Heading>
           <p className="mt-5 text-base leading-relaxed text-slate sm:text-lg">
-            Based at The Paddocks, we carry out surfacing and groundwork
-            projects across the island for residential, commercial and
-            infrastructure customers.
+            Based at {business.addressLine1}, we carry out surfacing and
+            groundwork projects across the island for residential,
+            commercial and infrastructure customers.
           </p>
         </FadeIn>
         <FadeIn delay={0.1}>

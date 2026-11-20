@@ -21,10 +21,10 @@ export const business = {
     "https://services.gov.im/ded/services/companiesregistry/viewcompany.iom?Id=Cd8%2bfkBJgRBjMWLa3WNqLw%3d%3d",
   phoneDisplay: "+44 7624 326454",
   phoneHref: "tel:+447624326454",
-  email: "thomasholmes@leggsurfacing.co.uk",
-  emailHref: "mailto:thomasholmes@leggsurfacing.co.uk",
-  website: "https://leggsurfacing.co.uk",
-  websiteDisplay: "leggsurfacing.co.uk",
+  email: "info@leggsurfacing.im",
+  emailHref: "mailto:info@leggsurfacing.im",
+  website: "https://leggsurfacing.im",
+  websiteDisplay: "leggsurfacing.im",
   facebookUrl: "https://www.facebook.com/leggsurfacing" as string | null,
   // Google Business Profile share link (confirmed listing).
   googleBusinessUrl: "https://share.google/ppz8HukNauN2d8UF7" as string | null,
@@ -84,7 +84,7 @@ export const business = {
 
 export const siteConfig = {
   name: "LEGG Surfacing",
-  url: "https://leggsurfacing.co.uk",
+  url: "https://leggsurfacing.im",
   defaultTitle: "LEGG Surfacing Ltd | Isle of Man Surfacing Specialists",
   defaultDescription:
     "LEGG Surfacing Ltd provides professional resin bound surfacing, tarmac driveways, road and lane surfacing, micro asphalt and groundworks across the Isle of Man, including Douglas, Peel, Ramsey, Castletown and Port Erin.",

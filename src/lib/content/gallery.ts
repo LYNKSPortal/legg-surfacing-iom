@@ -3,7 +3,8 @@ export type GalleryCategory =
   | "Resin Bound"
   | "Roads & Lanes"
   | "Micro Asphalt"
-  | "Groundworks";
+  | "Groundworks"
+  | "Playground Safety Surfacing";
 
 export const galleryCategories: GalleryCategory[] = [
   "Tarmac",
@@ -11,6 +12,7 @@ export const galleryCategories: GalleryCategory[] = [
   "Roads & Lanes",
   "Micro Asphalt",
   "Groundworks",
+  "Playground Safety Surfacing",
 ];
 
 export type GalleryImage = {
@@ -178,10 +180,10 @@ export const galleryImages: GalleryImage[] = [
     imageAlt: "Resin bound driveway surface",
   },
   {
-    id: "tarmac-gallery-8",
-    category: "Tarmac",
+    id: "resin-bound-gallery-24",
+    category: "Resin Bound",
     image: "/gallery/700049857_1561721449295600_2439805601770063670_n.jpg",
-    imageAlt: "Power trowelling equipment used during surfacing installation",
+    imageAlt: "Power trowelling equipment used to finish a resin bound surface",
   },
   {
     id: "tarmac-gallery-9",
@@ -250,14 +252,14 @@ export const galleryImages: GalleryImage[] = [
     imageAlt: "Resurfaced playground area with running track markings",
   },
   {
-    id: "groundworks-gallery-2",
-    category: "Groundworks",
+    id: "playground-gallery-1",
+    category: "Playground Safety Surfacing",
     image: "/gallery/825286647_1700787848722292_1344971380804336012_n.jpg",
     imageAlt: "Playground safety surfacing installation",
   },
   {
-    id: "groundworks-gallery-3",
-    category: "Groundworks",
+    id: "playground-gallery-2",
+    category: "Playground Safety Surfacing",
     image: "/gallery/825286818_1701841578616919_8224299180532772531_n.jpg",
     imageAlt: "Checking the depth of playground safety surfacing",
   },
@@ -310,14 +312,14 @@ export const galleryImages: GalleryImage[] = [
     imageAlt: "Tarmac driveway with illuminated edging detail",
   },
   {
-    id: "groundworks-gallery-5",
-    category: "Groundworks",
+    id: "playground-gallery-3",
+    category: "Playground Safety Surfacing",
     image: "/gallery/833041063_1700787718722305_6934058720639579370_n.jpg",
     imageAlt: "Playground safety surfacing beneath a slide",
   },
   {
-    id: "groundworks-gallery-6",
-    category: "Groundworks",
+    id: "playground-gallery-4",
+    category: "Playground Safety Surfacing",
     image: "/gallery/833218352_1701841671950243_3304913624525821390_n.jpg",
     imageAlt: "Playground safety surfacing installation",
   },
@@ -346,8 +348,8 @@ export const galleryImages: GalleryImage[] = [
     imageAlt: "Resin bound driveway at a residential property",
   },
   {
-    id: "groundworks-gallery-7",
-    category: "Groundworks",
+    id: "playground-gallery-5",
+    category: "Playground Safety Surfacing",
     image: "/gallery/836512461_1701841625283581_6149001243256553336_n.jpg",
     imageAlt: "Playground safety surfacing pathway",
   },
@@ -358,8 +360,8 @@ export const galleryImages: GalleryImage[] = [
     imageAlt: "Artificial grass and gravel landscaping works",
   },
   {
-    id: "groundworks-gallery-9",
-    category: "Groundworks",
+    id: "playground-gallery-6",
+    category: "Playground Safety Surfacing",
     image: "/gallery/839032908_1700787762055634_5167709595136696303_n.jpg",
     imageAlt: "Playground safety surfacing with climbing frame",
   },

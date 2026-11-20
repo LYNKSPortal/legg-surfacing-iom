@@ -1,3 +1,5 @@
+import { business } from "@/lib/business";
+
 export type Faq = {
   question: string;
   answer: string;
@@ -71,8 +73,7 @@ export const generalFaqs: Faq[] = [
   },
   {
     question: "Is LEGG Surfacing Ltd based on the Isle of Man?",
-    answer:
-      "Yes. LEGG Surfacing Ltd is based at The Paddocks, IM7 3BD, Isle of Man, and carries out all of our surfacing and groundwork projects across the Island.",
+    answer: `Yes. LEGG Surfacing Ltd is based at ${business.fullAddress}, and carries out all of our surfacing and groundwork projects across the Island.`,
   },
   {
     question: "Are you accredited to install VUBA resin bound systems?",

@@ -38,5 +38,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     images: [`${siteConfig.url}${blend.detailImage}`],
   }));
 
-  return [...staticRoutes, ...serviceRoutes, ...inspirationRoutes];
+  const privacyRoute = {
+    url: `${siteConfig.url}/privacy`,
+    lastModified: new Date(),
+    changeFrequency: "yearly" as const,
+    priority: 0.3,
+  };
+
+  return [...staticRoutes, ...serviceRoutes, ...inspirationRoutes, privacyRoute];
 }

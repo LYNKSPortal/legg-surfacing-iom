@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import { useSearchParams } from "next/navigation";
+import Link from "next/link";
 import { CheckCircle2, Loader2, Paperclip, TriangleAlert } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { contactFormSchema } from "@/lib/validation/contact";
@@ -256,6 +257,11 @@ export default function ContactForm() {
       </button>
       <p className="text-center text-xs text-slate-light">
         By submitting this form you agree to be contacted about your enquiry.
+        See our{" "}
+        <Link href="/privacy" className="font-medium text-charcoal underline hover:text-accent">
+          privacy notice
+        </Link>{" "}
+        for how we use your information.
       </p>
     </form>
   );

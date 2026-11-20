@@ -1,12 +1,15 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type { GalleryImage, GalleryCategory } from "@/lib/content/gallery";
 
 const aspectRatios = ["aspect-[4/5]", "aspect-[4/3]", "aspect-square", "aspect-[3/4]"];
+
+const FOCUSABLE_SELECTOR =
+  'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])';
 
 export default function GalleryGrid({
   images,
@@ -18,6 +21,8 @@ export default function GalleryGrid({
   const [activeCategory, setActiveCategory] = useState<GalleryCategory | "All">("All");
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const [lastCategory, setLastCategory] = useState(activeCategory);
+  const dialogRef = useRef<HTMLDivElement | null>(null);
+  const triggerRef = useRef<HTMLElement | null>(null);
 
   const filtered = useMemo(
     () =>
@@ -34,21 +39,66 @@ export default function GalleryGrid({
     setLightboxIndex(null);
   }
 
+  const isOpen = lightboxIndex !== null;
+
+  function openLightbox(index: number, trigger: HTMLElement) {
+    triggerRef.current = trigger;
+    setLightboxIndex(index);
+  }
+
+  function closeLightbox() {
+    setLightboxIndex(null);
+  }
+
+  // Lock the page, trap focus inside the dialog while it's open, and
+  // handle Escape/arrow-key navigation. Keyed on `isOpen` (not
+  // `lightboxIndex`) so navigating between photos doesn't re-run this
+  // setup/teardown and steal focus back out of the dialog.
   useEffect(() => {
-    if (lightboxIndex === null) return;
+    if (!isOpen) return;
+
+    dialogRef.current?.focus();
+
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setLightboxIndex(null);
+      if (e.key === "Escape") {
+        closeLightbox();
+        return;
+      }
       if (e.key === "ArrowRight") setLightboxIndex((i) => (i === null ? i : (i + 1) % filtered.length));
       if (e.key === "ArrowLeft")
         setLightboxIndex((i) => (i === null ? i : (i - 1 + filtered.length) % filtered.length));
+
+      if (e.key === "Tab" && dialogRef.current) {
+        const focusable = Array.from(
+          dialogRef.current.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR)
+        );
+        if (focusable.length === 0) return;
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        const current = document.activeElement;
+
+        if (e.shiftKey && (current === first || current === dialogRef.current)) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && current === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
     };
+
     document.body.style.overflow = "hidden";
     window.addEventListener("keydown", onKey);
     return () => {
       document.body.style.overflow = "";
       window.removeEventListener("keydown", onKey);
     };
-  }, [lightboxIndex, filtered.length]);
+  }, [isOpen, filtered.length]);
+
+  // Return focus to the thumbnail that opened the lightbox once it closes.
+  useEffect(() => {
+    if (!isOpen) triggerRef.current?.focus();
+  }, [isOpen]);
 
   const activeImage = lightboxIndex !== null ? filtered[lightboxIndex] : null;
 
@@ -83,7 +133,7 @@ export default function GalleryGrid({
             <button
               key={image.id}
               type="button"
-              onClick={() => setLightboxIndex(index)}
+              onClick={(e) => openLightbox(index, e.currentTarget)}
               aria-label={`View larger image: ${image.imageAlt}`}
               className={cn(
                 "group relative block w-full overflow-hidden rounded-2xl text-left shadow-sm ring-1 ring-charcoal/5 break-inside-avoid",
@@ -108,15 +158,17 @@ export default function GalleryGrid({
 
       {activeImage && (
         <div
+          ref={dialogRef}
           role="dialog"
           aria-modal="true"
           aria-label={activeImage.imageAlt}
-          className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-charcoal/95 p-4 backdrop-blur-sm"
-          onClick={() => setLightboxIndex(null)}
+          tabIndex={-1}
+          className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-charcoal/95 p-4 backdrop-blur-sm outline-none"
+          onClick={closeLightbox}
         >
           <button
             type="button"
-            onClick={() => setLightboxIndex(null)}
+            onClick={closeLightbox}
             aria-label="Close lightbox"
             className="absolute right-4 top-4 flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-offwhite hover:bg-white/20"
           >

@@ -15,7 +15,7 @@ type EnquiryPayload = ContactFormValues & { photoCount: number };
 export async function sendEnquiryEmail(payload: EnquiryPayload) {
   const apiKey = process.env.RESEND_API_KEY;
   const toAddress = process.env.CONTACT_TO_EMAIL || business.email;
-  const fromAddress = process.env.CONTACT_FROM_EMAIL || "enquiries@leggsurfacing.co.uk";
+  const fromAddress = process.env.CONTACT_FROM_EMAIL || "enquiries@leggsurfacing.im";
 
   if (!apiKey) {
     // No email provider configured yet. Log server-side so enquiries are
